@@ -25,14 +25,17 @@ describe('Context: My first test case',()=>{
         expect(false).to.equal(false);
 
     })
+    //if you write it.skip it will skip that method
     it ('Test3', ()=>{
         expect(false).not.to.equal(true);
         
     })
+    //if you write xit it will not run this test
     it ('Test4', ()=>{
         expect(5).to.equal(5);
         
     })
+    //if  you write it.only it will run only that test
     it ('Test5', ()=>{
         expect(true).to.equal('5'==5);
         
