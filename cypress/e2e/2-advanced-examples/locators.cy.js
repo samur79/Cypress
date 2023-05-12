@@ -24,6 +24,21 @@ describe('Locators', ()=>{
             expect (item).to.have.attr("type");
         })
 
+        //by attribute name (locators)
+        cy.get('[type]');
+
+        //by className
+        cy.get('.btn,btn-primary');
+
+        //by id
+        cy.get('#wooden_spoon');
+        // there is no xpath in Cypress
+
+        // If I want to use text: no xparth in cypress but it is still possible with a different aproach
+
+        cy.get('button').should('contain','Login').click;
+
+
     })
 
 
