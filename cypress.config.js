@@ -5,7 +5,9 @@ module.exports = defineConfig({
     baseUrl:'http://practice.cybertekschool.com',
     video:false,
     retries:0,
-    defaultCommandTimeout:5000,
+    defaultCommandTimeout:10000,
+    viewportHeight:800,
+    viewportWidth:1200,
 
     
     setupNodeEvents(on, config) {

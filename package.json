@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  
   "scripts": {
     "cypress-cli": "cypress open",
     "cypress-headed": "cypress run -b chrome",
@@ -11,11 +10,11 @@
     "eslint": "eslint cypress",
     "eslint-fix": "eslint cypress --fix"
   },
-
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^12.12.0"
+    "cypress": "^12.11.0",
+    "cypress-file-upload": "^5.0.8"
   },
   "devDependencies": {
     "eslint": "^8.40.0",
