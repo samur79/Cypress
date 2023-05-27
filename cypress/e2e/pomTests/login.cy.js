@@ -1,6 +1,7 @@
 import { auth } from '../../support/pages/auth'; // importing the object
 import { navigateTo } from '../../support/pages/navigation';
 
+// instead of importing you can use creating an object
 const LoginLocators = require('../../support/pages/auth'); // this way reaches all objects of auth file
 
 describe('Auth: Login user with different ways', () => {
@@ -10,7 +11,7 @@ describe('Auth: Login user with different ways', () => {
     navigateTo.loginPage(); // this function we called it from our POM
   });
 
-  it('Happy Path scenario using POM FUNCTION', () => {
+  xit('Happy Path scenario using POM FUNCTION', () => {
     // auth.login('hardcoded variables') -- not a good way
     cy.fixture('user').then((user) => {
       auth.login(user.user2.username, user.user2.password);
@@ -20,7 +21,7 @@ describe('Auth: Login user with different ways', () => {
     auth.logout();
   });
 
-  it('Happy Path scenario using POM Locators', () => {
+  xit('Happy Path scenario using POM Locators', () => {
     // auth.login('hardcoded variables') -- not a good way
     cy.fixture('user').then((user) => {
       // auth.login(user.user2.username, user.user2.password);

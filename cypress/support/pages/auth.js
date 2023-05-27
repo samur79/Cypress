@@ -14,6 +14,8 @@ class Auth {
 
 const auth = new Auth(); // object of the class we made
 
+//= =================================================================================================
+
 // here is a different class in the same file
 
 class Locators {

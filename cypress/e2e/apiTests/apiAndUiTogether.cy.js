@@ -2,6 +2,8 @@ const username = `user${Math.floor(Math.random() * 100000 + 100000)
   .toString()
   .substring(1)}`;
 const passWord = 'Test123456!';
+console.log(username);
+console.log(passWord);
 
 describe('E2E - Test API integrated UI Test', () => {
   beforeEach('create a user and generate token from API and set cookies', () => {
@@ -10,8 +12,8 @@ describe('E2E - Test API integrated UI Test', () => {
       method: 'POST',
       url: `${Cypress.env('apiUrl')}${Cypress.env('generateUser')}`,
       body: {
-        userName: username,
-        password: passWord,
+        userName: username, // this is created at the beginning of the page
+        password: passWord, // this is created at the beginning of the page
       },
     }).then((response) => {
       cy.setCookie('userID', response.body.userID);
@@ -52,6 +54,6 @@ describe('E2E - Test API integrated UI Test', () => {
 
   it('Check if user is logged in from UI environment', { baseUrl: 'https://demoqa.com' }, () => {
     cy.visit('/profile');
-    cy.get('#userName-value').contains(username).should('be.visible');
+    cy.get('#userName-value').contains(username).should('be.visible'); // checking the username by UI side
   });
 });
